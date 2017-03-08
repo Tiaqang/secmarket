@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.my.secmarket.MainActivity">
+
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_alignParentBottom="true"
+        android:background="#aaaaaa"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:onClick="click"
+            android:id="@+id/market"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/market_image"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:src="@drawable/ic_home_black_18dp"
+                />
+            <TextView
+                android:id="@+id/market_text"
+                android:layout_below="@id/market_image"
+                android:text="市场"
+                android:textSize="12sp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:onClick="click"
+            android:id="@+id/aboutme"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/aboutme_image"
+                android:layout_centerHorizontal="true"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:src="@drawable/ic_open_in_browser_black_18dp" />
+
+            <TextView
+                android:id="@+id/aboutme_text"
+                android:text="我的发布"
+                android:textSize="12sp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/aboutme_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:onClick="click"
+            android:id="@+id/user"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/user_image"
+                android:layout_centerHorizontal="true"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:src="@drawable/ic_perm_identity_black_18dp"/>
+            <TextView
+                android:id="@+id/user_text"
+                android:layout_below="@id/user_image"
+                android:text="我的"
+                android:textSize="12sp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </RadioGroup>
+
+
+    <FrameLayout
+        android:layout_above="@id/group"
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+</RelativeLayout>
